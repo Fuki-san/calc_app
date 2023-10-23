@@ -3,8 +3,8 @@
 use App\Http\Controllers\CalcController;
 //useでRoute入力だけでRouteクラスが起動できるようにしている
 use Illuminate\Support\Facades\Route;
-
+//dd
 
 // calc_appここから
 
-Route::get('/calcs/{n1}/{cal}/{n2}',[CalcController::class, 'result']);
+Route::get('/calcs/{n1}/{cal}/{n2}', [CalcController::class, 'result']);
