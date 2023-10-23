@@ -11,16 +11,13 @@ use Illuminate\Http\Request;
 class CalcController extends Controller{
     public function result($n1, $cal, $n2){
         $result = 0;
-    if($cal == 'addtion'){
+    if($cal == 'addition'){
         $result = $n1 + $n2;
-    }
-    if($cal == 'subtraction'){
+    } elseif($cal == 'subtraction'){
         $result = $n1 - $n2;
-    }
-    if($cal == 'multiplication'){
+    } elseif($cal == 'multiplication'){
         $result = $n1 * $n2;
-    }
-    if($cal == 'division'){
+    }elseif($cal == 'division'){
         $result = $n1 / $n2;
     }
     
