@@ -1,18 +1,10 @@
 <?php
-
+//下記useと同様にCalcControllerと入力するだけでクラスが定義できるようにしたいからuseを使う。
+use App\Http\Controllers\CalcController;
+//useでRoute入力だけでRouteクラスが起動できるようにしている
 use Illuminate\Support\Facades\Route;
+//dd
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// calc_appここから
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/calcs/{n1}/{cal}/{n2}', [CalcController::class, 'result']);
