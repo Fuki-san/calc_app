@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// namespaceを利用することで、このファイル名(ファイル内のクラスなど)がglablではなくnamespace後のパスにファイル内のクラスが配置
+// namespaceを利用することで、このファイル名(ファイル内のクラスなど)がglobalではなくnamespace後のパスにファイル内のクラスが配置
 //されるため、ここで定義したクラスと別のファイルのクラスの名前が例え一緒でも独立、区別、衝突を防げる。
 
 //useを利用することで、使用したいクラス名を省略して利用することができる。通常はパスを指定してクラスを
@@ -27,9 +27,6 @@ class CalcController extends Controller
         return view(
             '/calcs',
             [
-                'n1' => $n1,
-                'n2' => $n2,
-                'cal' => $cal,
                 'result' => $result
             ]
         );
